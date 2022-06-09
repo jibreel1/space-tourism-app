@@ -1,0 +1,36 @@
+.navbar {
+   position: relative;
+   height: 96px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0 0 3.4375em;
+
+   &_links {
+      display: flex;
+      gap: 3.125em;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(9.5px);
+      padding: 2.4375em 10.3125em 2.4375em 7.6875em;
+      color: $color-white;
+
+      li {
+         text-transform: uppercase;
+         font-weight: 400;
+      }
+
+      span {
+         margin-right: 12px;
+         font-weight: 700;
+      }
+   }
+
+   &_line {
+      left: 167px;
+      position: absolute;
+      width: 475px;
+      height: 1px;
+      background-color: $color-white;
+      z-index: 2;
+   }
+}
