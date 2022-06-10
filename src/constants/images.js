@@ -1,5 +1,6 @@
 import logo from "../assets/shared/logo.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
+import close from "../assets/shared/icon-close.svg";
 
 //destination
 import europa from "../assets/destination/image-europa.png";
@@ -24,6 +25,7 @@ import spaceport_portrait from "../assets/technology/image-spaceport-portrait.jp
 const Images = {
    logo,
    hamburger,
+   close,
    europa,
    mars,
    moon,

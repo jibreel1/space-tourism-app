@@ -12,7 +12,7 @@ const Hero = () => {
             </p>
          </div>
          <div className="hero_cta">
-            <p className="">Explore</p>
+            <a className="">Explore</a>
          </div>
       </div>
    );

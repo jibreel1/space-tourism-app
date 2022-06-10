@@ -34,13 +34,53 @@
          padding: 2.4375em 10.3125em 2.4375em 7.6875em;
       }
 
-      li {
+      a {
+         position: relative;
          display: flex;
          font-weight: 400;
          color: $color-white;
 
          @include point-up(medium) {
             font-size: 0.875rem;
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 3px;
+            top: 52px;
+            left: 0px;
+            background-color: rgba(255, 255, 255, 0.501);
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0);
+
+            @include point-up(xlarge) {
+               width: 70px;
+            }
+         }
+
+         &.active {
+            &::before {
+               background-color: #fff;
+               transform: scale(1);
+            }
+         }
+
+         &:hover {
+            &::before {
+               transform: scale(1);
+            }
+         }
+
+         &:nth-child(2n) {
+            &::before {
+               width: 87px;
+
+               @include point-up(xlarge) {
+                  width: 127px;
+               }
+            }
          }
       }
 
@@ -86,6 +126,7 @@
    }
 
    &_ham {
+      cursor: pointer;
       @include point-up(medium) {
          display: none;
       }

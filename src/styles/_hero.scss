@@ -42,6 +42,7 @@
    }
 
    &_cta {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -49,18 +50,48 @@
       height: 150px;
       background-color: $color-white;
       border-radius: 50%;
+      z-index: 1;
+      cursor: pointer;
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: 250px;
+         height: 250px;
+         background-color: rgba(255, 255, 255, 0.2);
+         border-radius: 50%;
+         z-index: -1;
+         transition: opacity 0.5s ease-in-out;
+         opacity: 0;
+      }
+
+      &:hover {
+         &::before {
+            opacity: 1;
+         }
+      }
 
       @include point-up(medium) {
          width: 242px;
          height: 242px;
+
+         &::before {
+            width: 350px;
+            height: 350px;
+         }
       }
 
       @include point-up(large) {
          width: 274px;
          height: 274px;
+
+         &::before {
+            width: 400px;
+            height: 400px;
+         }
       }
 
-      p {
+      a {
          font-family: "Bellefair", serif;
          font-size: 1.25rem;
          text-transform: uppercase;

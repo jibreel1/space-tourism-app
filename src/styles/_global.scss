@@ -7,6 +7,7 @@
 
 a {
    text-decoration: none;
+   cursor: pointer;
 }
 
 .flex_center {
@@ -20,7 +21,6 @@ a {
 // }
 
 .space_tour {
-   // padding-top: 2.5em;
    background-image: url("../assets/home/background-home-mobile.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -35,6 +35,7 @@ a {
    }
 
    @include point-up(large) {
+      padding-top: 2.5em;
       background-image: url("../assets/home/background-home-desktop.jpg");
       height: 100%;
    }
@@ -69,6 +70,7 @@ a {
 
    @include point-up(large) {
       font-size: 1.125em;
+      line-height: 32px;
    }
 }
 

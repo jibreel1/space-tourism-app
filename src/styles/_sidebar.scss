@@ -1,0 +1,63 @@
+.sidebar {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(11.5px);
+   width: 254px;
+   height: 100vh;
+   padding: 7.37em 0 0 2em;
+   animation: slide-in 0.5s ease-in-out;
+   z-index: 2;
+   //    display: none;
+
+   @include point-up(medium) {
+      display: none;
+   }
+
+   &_close {
+      position: absolute;
+      top: 34px;
+      right: 27px;
+   }
+
+   &_links {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      a {
+         display: flex;
+         align-items: center;
+         color: $color-white;
+
+         &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 31px;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.501);
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0);
+         }
+
+         &.active {
+            &::before {
+               background-color: $color-white;
+               transform: scale(1);
+            }
+         }
+
+         &:hover {
+            &::before {
+               transform: scale(1);
+            }
+         }
+      }
+
+      span {
+         margin-right: 12px;
+      }
+   }
+}
