@@ -1,0 +1,77 @@
+.hero {
+   padding: 1.5em 1.5em 0 1.5em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   gap: 5em;
+
+   @include point-up(medium) {
+      padding: 6.625em 10em 6.625em 10em;
+      gap: 9.375em;
+   }
+
+   @include point-up(large) {
+      justify-content: space-between;
+   }
+
+   @include point-up(xlarge) {
+      text-align: left;
+      flex-direction: row;
+      padding: 15.625em 10.3125em 8.125em 10.3125em;
+   }
+
+   &_text {
+      p:nth-child(2) {
+         padding-block: 1rem;
+         //  line-height: 100px;
+
+         @include point-up(medium) {
+            padding-block: 1.5rem;
+         }
+      }
+
+      @include point-up(large) {
+         width: 750px;
+      }
+
+      @include point-up(xlarge) {
+         width: 450px;
+      }
+   }
+
+   &_cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+      background-color: $color-white;
+      border-radius: 50%;
+
+      @include point-up(medium) {
+         width: 242px;
+         height: 242px;
+      }
+
+      @include point-up(large) {
+         width: 274px;
+         height: 274px;
+      }
+
+      p {
+         font-family: "Bellefair", serif;
+         font-size: 1.25rem;
+         text-transform: uppercase;
+         letter-spacing: 1.25px;
+      }
+
+      //   &:hover {
+      //      width: 450px;
+      //      height: 450px;
+      //      background-color: rgba(255, 255, 255, 0.542);
+      //      border-radius: 50%;
+      //   }
+   }
+}

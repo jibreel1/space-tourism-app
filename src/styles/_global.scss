@@ -20,18 +20,66 @@ a {
 // }
 
 .space_tour {
-   padding-top: 2.5em;
-   background-image: url("../assets/home/background-home-desktop.jpg");
+   // padding-top: 2.5em;
+   background-image: url("../assets/home/background-home-mobile.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: top;
    height: 100vh;
    width: 100%;
-   margin: 0;
+   // margin: 0;
+
+   @include point-up(medium) {
+      background-image: url("../assets/home/background-home-tablet.jpg");
+      height: 100%;
+   }
+
+   @include point-up(large) {
+      background-image: url("../assets/home/background-home-desktop.jpg");
+      height: 100%;
+   }
 }
 
-.barlow-text {
+.barlow_text {
    font-size: 1rem;
    font-family: $font-text;
    letter-spacing: 2.7px;
+   color: $color-text;
+   text-transform: uppercase;
+
+   @include point-up(medium) {
+      font-size: 1.25em;
+   }
+
+   @include point-up(large) {
+      font-size: 1.5625em;
+   }
+}
+
+.barlow_text_sub {
+   font-size: 0.9375rem;
+   font-family: $font-sub-text;
+   color: $color-text;
+   line-height: 25px;
+   // letter-spacing: 1px;
+
+   @include point-up(medium) {
+      font-size: 1em;
+   }
+
+   @include point-up(large) {
+      font-size: 1.125em;
+   }
+}
+
+.bellefair_text {
+   font-size: 5rem;
+   font-family: $font-head;
+   letter-spacing: 2.7px;
+   color: $color-white;
+   text-transform: uppercase;
+
+   @include point-up(medium) {
+      font-size: 9.375em;
+   }
 }

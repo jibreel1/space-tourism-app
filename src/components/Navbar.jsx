@@ -1,27 +1,28 @@
-import Images from "../../constants/images";
+import Images from "../constants/images";
 
 const Navbar = () => {
    return (
-      <div className="navbar">
+      <nav className="navbar">
          <div>
             <img src={Images.logo} alt="" />
          </div>
          <div className="navbar_line"></div>
-         <ul className="navbar_links barlow-text">
-            <li>
+         <ul className="navbar_links">
+            <li className="barlow_text">
                <span>00</span>home
             </li>
-            <li>
+            <li className="barlow_text">
                <span>01</span>destination
             </li>
-            <li>
+            <li className="barlow_text">
                <span>02</span>crew
             </li>
-            <li>
+            <li className="barlow_text">
                <span>03</span>technology
             </li>
          </ul>
-      </div>
+         <img src={Images.hamburger} alt="menu" className="navbar_ham" />
+      </nav>
    );
 };
 

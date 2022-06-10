@@ -1,4 +1,5 @@
 import logo from "../assets/shared/logo.svg";
+import hamburger from "../assets/shared/icon-hamburger.svg";
 
 //destination
 import europa from "../assets/destination/image-europa.png";
@@ -22,6 +23,7 @@ import spaceport_portrait from "../assets/technology/image-spaceport-portrait.jp
 
 const Images = {
    logo,
+   hamburger,
    europa,
    mars,
    moon,
