@@ -5,8 +5,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   //    padding: 0 0 0 3.4375em;
    padding: 1.5em;
+   z-index: 2;
 
    @include point-up(medium) {
       padding: 0 0 0 2.4375em;
@@ -14,7 +14,6 @@
 
    &_links {
       display: none;
-      //   width: 100%;
 
       @include point-up(medium) {
          display: flex;

@@ -20,14 +20,13 @@ a {
 
 // }
 
-.space_tour {
+.space_home {
    background-image: url("../assets/home/background-home-mobile.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: top;
    height: 100vh;
    width: 100%;
-   // margin: 0;
 
    @include point-up(medium) {
       background-image: url("../assets/home/background-home-tablet.jpg");
@@ -62,7 +61,6 @@ a {
    font-family: $font-sub-text;
    color: $color-text;
    line-height: 25px;
-   // letter-spacing: 1px;
 
    @include point-up(medium) {
       font-size: 1em;

@@ -1,6 +1,8 @@
+import { Link, useLocation } from "react-router-dom";
 import Images from "../constants/images";
 
-const SideBar = ({ close }) => {
+const SideBar = ({ close, links }) => {
+   const location = useLocation();
    return (
       <div className="sidebar">
          <img
@@ -10,18 +12,21 @@ const SideBar = ({ close }) => {
             onClick={close}
          />
          <div className="sidebar_links">
-            <a className="barlow_text active">
-               <span>00</span>home
-            </a>
-            <a className="barlow_text">
-               <span>01</span>destination
-            </a>
-            <a className="barlow_text">
-               <span>02</span>crew
-            </a>
-            <a className="barlow_text">
-               <span>03</span>technology
-            </a>
+            {links.map(link => (
+               <Link
+                  onClick={close}
+                  className={
+                     location.pathname === link.path
+                        ? "barlow_text active"
+                        : "barlow_text"
+                  }
+                  to={link.path}
+                  key={link.id}
+               >
+                  <span>{link.id}</span>
+                  {link.name}
+               </Link>
+            ))}
          </div>
       </div>
    );

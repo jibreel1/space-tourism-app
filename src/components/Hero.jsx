@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
    return (
       <div className="hero">
@@ -12,7 +14,7 @@ const Hero = () => {
             </p>
          </div>
          <div className="hero_cta">
-            <a className="">Explore</a>
+            <Link to="/destination">Explore</Link>
          </div>
       </div>
    );

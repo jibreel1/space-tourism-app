@@ -1,0 +1,233 @@
+.space_destination {
+   background-image: url("../assets/destination/background-destination-mobile.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   padding-bottom: 5em;
+
+   @include point-up(medium) {
+      background-image: url("../assets/destination/background-destination-tablet.jpg");
+   }
+
+   @include point-up(large) {
+      padding-top: 2.5em;
+      background-image: url("../assets/destination/background-destination-desktop.jpg");
+   }
+}
+
+.destination {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 5.5em 1.5em 1em 1.5em;
+
+   @include point-up(medium) {
+      padding: 8.5em 2.375em 1em 2.375em;
+   }
+
+   @include point-up(large) {
+      padding-inline: 3.75em;
+   }
+
+   @include point-up(xlarge) {
+      padding: 13.25em 10.375em 1em 10.375em;
+   }
+
+   &_flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include point-up(xlarge) {
+         flex-direction: row;
+         gap: 157px;
+      }
+
+      &_2 {
+         @include point-up(xlarge) {
+            width: 450px;
+         }
+      }
+   }
+
+   &_image {
+      padding: 1.625em 0 2em 0;
+
+      @include point-up(medium) {
+         padding: 3.75em 0 3.25em 0;
+      }
+
+      img {
+         width: 170px;
+         height: 170px;
+
+         @include point-up(medium) {
+            width: 300px;
+            height: 300px;
+         }
+         @include point-up(large) {
+            width: 450px;
+            height: 450px;
+         }
+      }
+   }
+
+   &_header {
+      color: $color-white;
+      @include point-up(medium) {
+         align-self: flex-start;
+      }
+
+      span {
+         color: rgba(255, 255, 255, 0.59);
+         padding-right: 1.125em;
+      }
+   }
+
+   &_links {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 1.625em;
+      height: 28px;
+
+      @include point-up(medium) {
+         gap: 2.25em;
+      }
+
+      @include point-up(xlarge) {
+         justify-content: flex-start;
+      }
+
+      p {
+         display: flex;
+         justify-content: center;
+         font-size: 0.875em;
+         cursor: pointer;
+         color: rgba(255, 255, 255, 0.7);
+
+         @include point-up(medium) {
+            font-size: 1em;
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 3px;
+            top: 25px;
+            background-color: rgba(255, 255, 255, 0.501);
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0);
+         }
+
+         &.active {
+            color: $color-white;
+            &::before {
+               background-color: #fff;
+               transform: scale(1);
+            }
+         }
+
+         &:hover {
+            &::before {
+               transform: scale(1);
+            }
+         }
+      }
+   }
+
+   &_location {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      @include point-up(xlarge) {
+         text-align: left;
+      }
+
+      h1 {
+         font-family: $font-head;
+         font-size: 3.5625em;
+         color: $color-white;
+         text-transform: uppercase;
+         font-weight: lighter;
+         padding: 20px 0;
+
+         @include point-up(medium) {
+            font-size: 5rem;
+         }
+         @include point-up(large) {
+            font-size: 6.25rem;
+         }
+      }
+
+      p {
+         @include point-up(medium) {
+            padding: 0 3.75em;
+         }
+
+         @include point-up(xlarge) {
+            padding: 0;
+         }
+      }
+   }
+
+   .line {
+      width: 100%;
+      height: 1px;
+      background-color: $color-white;
+      margin: 2em 0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      @include point-up(medium) {
+         margin: 3em 0 1.75em 0;
+      }
+   }
+
+   .dist_travel {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2em;
+
+      @include point-up(medium) {
+         flex-direction: row;
+         gap: 100px;
+      }
+
+      @include point-up(xlarge) {
+         justify-content: flex-start;
+         gap: 60px;
+      }
+   }
+
+   &_average {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+
+      @include point-up(xlarge) {
+         text-align: left;
+      }
+
+      p {
+         font-size: 14px;
+      }
+
+      .dist {
+         font-family: $font-head;
+         font-size: 28px;
+         color: $color-white;
+         text-transform: uppercase;
+         font-weight: lighter;
+      }
+   }
+}
