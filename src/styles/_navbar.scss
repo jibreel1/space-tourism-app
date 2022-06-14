@@ -50,7 +50,7 @@
             height: 3px;
             top: 52px;
             left: 0px;
-            background-color: rgba(255, 255, 255, 0.501);
+            background-color: $color-light;
             transition: transform 0.3s ease-in-out;
             transform: scale(0);
 
@@ -61,7 +61,7 @@
 
          &.active {
             &::before {
-               background-color: #fff;
+               background-color: $color-white;
                transform: scale(1);
             }
          }

@@ -34,7 +34,7 @@
    }
 
    @include point-up(xlarge) {
-      padding: 13.25em 10.375em 1em 10.375em;
+      padding: 10.75em 10.375em 1em 10.375em;
    }
 
    &_flex {
@@ -83,7 +83,7 @@
       }
 
       span {
-         color: rgba(255, 255, 255, 0.59);
+         color: $color-light;
          padding-right: 1.125em;
       }
    }
@@ -108,7 +108,7 @@
          justify-content: center;
          font-size: 0.875em;
          cursor: pointer;
-         color: rgba(255, 255, 255, 0.7);
+         color: $color-light;
 
          @include point-up(medium) {
             font-size: 1em;
@@ -120,7 +120,7 @@
             width: 36px;
             height: 3px;
             top: 25px;
-            background-color: rgba(255, 255, 255, 0.501);
+            background-color: $color-light;
             transition: transform 0.3s ease-in-out;
             transform: scale(0);
          }
@@ -128,12 +128,13 @@
          &.active {
             color: $color-white;
             &::before {
-               background-color: #fff;
+               background-color: $color-white;
                transform: scale(1);
             }
          }
 
          &:hover {
+            color: $color-hover;
             &::before {
                transform: scale(1);
             }
