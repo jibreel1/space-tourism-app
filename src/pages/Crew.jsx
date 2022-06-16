@@ -10,7 +10,7 @@ const Crew = () => {
    return (
       <div className="space_crew">
          <div className="crew">
-            <div className="barlow_text crew_header">
+            <div className="barlow_text page_header">
                <p>
                   <span>02</span>Meet your Crew
                </p>

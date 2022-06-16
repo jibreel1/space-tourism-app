@@ -83,3 +83,15 @@ a {
       font-size: 9.375em;
    }
 }
+
+.page_header {
+   color: $color-white;
+   @include point-up(medium) {
+      align-self: flex-start;
+   }
+
+   span {
+      color: $color-light;
+      padding-right: 1.125em;
+   }
+}

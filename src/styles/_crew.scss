@@ -6,16 +6,18 @@
    width: 100%;
    position: absolute;
    top: 0;
-   bottom: 0;
+   padding-bottom: 17em;
 
    @include point-up(medium) {
-      background-image: url("../assets/crew/background-crew-tablet.jpg");
       bottom: initial;
+      background-image: url("../assets/crew/background-crew-tablet.jpg");
+      padding-bottom: 0;
    }
 
    @include point-up(large) {
       padding-top: 2.5em;
       background-image: url("../assets/crew/background-crew-desktop.jpg");
+      padding-bottom: 0;
    }
 }
 
@@ -24,7 +26,6 @@
    align-items: center;
    flex-direction: column;
    padding: 5.5em 1.5em 1.5em 1.5em;
-   overflow-x: hidden;
 
    @include point-up(medium) {
       padding: 8.5em 2.375em 0 2.375em;
@@ -32,17 +33,6 @@
 
    @include point-up(xlarge) {
       padding: 10.75em 8.5625em 0 10.375em;
-   }
-   &_header {
-      color: $color-white;
-      @include point-up(medium) {
-         align-self: flex-start;
-      }
-
-      span {
-         color: $color-light;
-         padding-right: 1.125em;
-      }
    }
 
    &_content {
@@ -186,13 +176,17 @@
       text-transform: uppercase;
       padding-top: 0.5em;
       padding-bottom: 0.75em;
-
+      text-align: center;
       @include point-up(medium) {
          font-size: 2.5rem;
       }
 
       @include point-up(large) {
          font-size: 3.5rem;
+      }
+
+      @include point-up(xlarge) {
+         text-align: left;
       }
    }
 

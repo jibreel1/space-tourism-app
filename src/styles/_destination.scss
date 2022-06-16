@@ -19,7 +19,6 @@
 }
 
 .destination {
-   position: relative;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -73,18 +72,6 @@
             width: 450px;
             height: 450px;
          }
-      }
-   }
-
-   &_header {
-      color: $color-white;
-      @include point-up(medium) {
-         align-self: flex-start;
-      }
-
-      span {
-         color: $color-light;
-         padding-right: 1.125em;
       }
    }
 

@@ -1,0 +1,221 @@
+.space_tech {
+   background-image: url("../assets/technology/background-technology-mobile.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   padding-bottom: 17em;
+
+   @include point-up(medium) {
+      background-image: url("../assets/technology/background-technology-tablet.jpg");
+      padding-bottom: 0;
+   }
+
+   @include point-up(large) {
+      padding-top: 2.5em;
+      background-image: url("../assets/technology/background-technology-desktop.jpg");
+      padding-bottom: 0;
+   }
+}
+
+.tech {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 5.5em 0 0 0;
+
+   @include point-up(medium) {
+      padding: 8.5em 0 5em 0;
+   }
+
+   @include point-up(large) {
+      padding: 8.5em 0 5em 2em;
+      align-items: flex-end;
+   }
+
+   @include point-up(xlarge) {
+      padding: 10.75em 0 8em 8.5em;
+   }
+
+   &_header {
+      @include point-up(medium) {
+         padding-left: 2.5em;
+      }
+      @include point-up(large) {
+         padding-left: 0;
+      }
+   }
+
+   &_content {
+      display: flex;
+      flex-direction: column;
+
+      @include point-up(large) {
+         flex-direction: row-reverse;
+      }
+
+      @include point-up(xlarge) {
+         gap: 3em;
+      }
+   }
+
+   &_img {
+      padding-block: 2em;
+
+      @include point-up(medium) {
+         padding-block: 3.75em;
+      }
+
+      @include point-up(large) {
+         padding-left: 1em;
+      }
+
+      @include point-up(xlarge) {
+         justify-content: flex-end;
+         padding: 0;
+      }
+      img {
+         width: 100%;
+
+         @include point-up(large) {
+            height: 400px;
+         }
+
+         @include point-up(xlarge) {
+            width: 515px;
+            height: 527px;
+         }
+      }
+
+      .img_1 {
+         @include point-up(large) {
+            display: none;
+         }
+      }
+
+      .img_2 {
+         display: none;
+
+         @include point-up(large) {
+            display: block;
+         }
+      }
+   }
+
+   &_descr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include point-up(large) {
+         padding-top: 1em;
+         align-items: flex-start;
+         justify-content: center;
+      }
+
+      @include point-up(xlarge) {
+         flex-direction: row;
+         align-items: center;
+         gap: 5em;
+      }
+   }
+
+   &_nav {
+      display: flex;
+      gap: 1em;
+
+      @include point-up(xlarge) {
+         flex-direction: column;
+      }
+
+      div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         border: 1px solid $color-light;
+         color: $color-white;
+         font-family: $font-head;
+         font-size: 1rem;
+         transition: border 0.5s ease-in-out;
+         cursor: pointer;
+
+         @include point-up(medium) {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+         }
+
+         @include point-up(xlarge) {
+            width: 80px;
+            height: 80px;
+            font-size: 2em;
+         }
+
+         &:hover {
+            border: 1px solid $color-white;
+         }
+
+         &.active {
+            background-color: $color-white;
+            color: $color-dark;
+         }
+      }
+   }
+
+   &_info {
+      display: flex;
+      flex-direction: column;
+      padding: 1.625em 1.5em 1.5em 1.5em;
+      text-align: center;
+
+      @include point-up(medium) {
+         width: 460px;
+      }
+
+      @include point-up(large) {
+         width: 500px;
+         padding: 1.625em 0 0 0;
+         text-align: left;
+      }
+
+      @include point-up(xlarge) {
+         width: 470px;
+      }
+   }
+
+   &_name {
+      font-family: $font-head;
+      font-size: 1.5rem;
+      color: $color-white;
+      text-transform: uppercase;
+      padding-top: 0.5em;
+      padding-bottom: 0.75em;
+      text-align: center;
+
+      @include point-up(medium) {
+         font-size: 2.5rem;
+      }
+
+      @include point-up(large) {
+         font-size: 3.5rem;
+         text-align: left;
+      }
+   }
+
+   &_sub-info {
+      font-family: $font-text;
+      font-size: 14px;
+      letter-spacing: 2.36px;
+      color: $color-text;
+      text-transform: uppercase;
+
+      @include point-up(medium) {
+         font-size: 1rem;
+      }
+   }
+}

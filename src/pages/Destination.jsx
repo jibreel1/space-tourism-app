@@ -9,7 +9,7 @@ const Destination = () => {
    return (
       <div className="space_destination">
          <div className="destination">
-            <div className="barlow_text destination_header">
+            <div className="barlow_text page_header">
                <p>
                   <span>01</span>Pick your destination
                </p>
