@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![The Homepage Screenshot](./screenshot.jpg)
 
 ### Links
 
--  Solution URL: [Add solution URL here](https://github.com/jibreel1/space-tourism-app)
--  Live Site URL: [Add live site URL here](https://space-travel-app.netlify.app/)
+-  Solution URL: [Github](https://github.com/jibreel1/space-tourism-app)
+-  Live Site URL: [Netlify site](https://space-travel-app.netlify.app/)
 
 ## My process
 
@@ -57,7 +57,7 @@ I want to focus more on React because I find it very easy to use
 
 -  [w3schools](https://www.w3schools.com) - This website really helped me as a beginner. I have really improved, thanks to them.
 
--  [MDN](developer.mozilla.org) - This website really helped improve my React.
+-  [MDN](https://developer.mozilla.org/en-US/) - This website really helped improve my React.
 
 ## Author
 
